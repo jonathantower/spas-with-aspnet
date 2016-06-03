@@ -1,0 +1,14 @@
+﻿<div class="login">
+	<h2>Login</h2>
+	<fieldset>
+		<label>Username:</label>
+		<input type="text" autofocus ng-model="form.username"/>
+		<span class="validation" ng-if="validation.Username">{{validation.Username}}</span>
+	</fieldset>
+	<fieldset>
+		<label>Password:</label>
+		<input type="password" ng-model="form.password"/>
+		<span class="validation" ng-if="validation.Password">{{validation.Password}}</span>
+	</fieldset>
+	<button ng-click="login()">Login</button>
+</div>

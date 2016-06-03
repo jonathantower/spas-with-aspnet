@@ -1,0 +1,76 @@
+﻿body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+body table {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+body table th {
+  background-color: #d3d3d3;
+}
+body table td,
+body table th {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  padding: 5px;
+}
+body table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+body .login-link {
+  float: right;
+}
+body .validation {
+  color: red;
+  display: block;
+}
+body .login {
+  width: 300px;
+  margin: 20px auto 0 auto;
+  border: 1px solid gray;
+  padding: 0 10px 10px 10px;
+  border-radius: 8px;
+}
+body .login h2 {
+  padding: 0;
+  margin: 4px;
+}
+body .login fieldset {
+  border-width: 0;
+}
+body .login fieldset label {
+  width: 80px;
+  display: inline-block;
+}
+body a {
+  color: black;
+}
+body a:visited {
+  color: black;
+}
+body header {
+  background-color: lightgray;
+  padding: 10px;
+}
+body header a:not(.login-link) {
+  margin-right: 16px;
+}
+body section {
+  padding: 10px;
+}
+body footer {
+  background-color: lightgray;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: right;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=main.css.map */

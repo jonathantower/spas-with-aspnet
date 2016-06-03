@@ -1,0 +1,26 @@
+﻿<div>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Description</th>
+				<th>Qty</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="order in orders">
+				<td>{{ order.OrderId }}</td>
+				<td>{{ order.ItemDescription }}</td>
+				<td>{{ order.ItemQuantity }}</td>
+				<td>{{ order.ItemPrice }}</td>
+			</tr>
+			<tr ng-if="!orders || orders.length === 0">
+				<td colspan="4">
+					<span ng-if="authenticated">No orders to display.</span>
+					<span ng-if="!authenticated">You must log in to see orders.</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

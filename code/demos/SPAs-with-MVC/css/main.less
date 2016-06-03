@@ -1,0 +1,96 @@
+﻿body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: sans-serif;
+
+	table {
+		width: 100%;
+		border: 1px solid black;
+		border-collapse: collapse;
+
+		th {
+			background-color: #d3d3d3;
+		}
+
+		td, th {
+			border-top: 1px solid black;
+			border-right: 1px solid black;
+			padding: 5px;
+		}
+
+		tr:nth-child(odd) {
+			background-color: lighten(#d3d3d3, 15%);
+		}
+	}
+
+	.login-link {
+		float: right;
+	}
+
+	.validation {
+		color: red;
+        display: block;
+	}
+
+	.login {
+		width: 300px;
+		margin: 20px auto 0 auto;
+		border: 1px solid gray;
+		padding: 0 10px 10px 10px;
+		border-radius: 8px;
+
+		h2 {
+			padding: 0;
+			margin: 4px;
+		}
+
+		fieldset {
+			border-width: 0;
+
+			label {
+				width: 80px;
+				display: inline-block;
+			}
+
+			input {
+			}
+		}
+
+		button {
+		}
+	}
+
+	a {
+		color: black;
+
+		&:visited {
+			color: black;
+		}
+	}
+
+	header {
+		background-color: lightgray;
+		padding: 10px;
+
+		a:not(.login-link) {
+			margin-right: 16px;
+		}
+	}
+
+	section {
+		padding: 10px;
+	}
+
+	footer {
+		background-color: lightgray;
+		padding: 10px;
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		text-align: right;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}

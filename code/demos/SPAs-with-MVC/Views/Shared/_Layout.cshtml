@@ -1,0 +1,40 @@
+﻿@using System.Configuration;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Demo</title>
+
+	<link href="~/css/main.min.css" rel="stylesheet" />
+</head>
+<body ng-app="app">
+	<div>
+		<header>
+			<a href="#/">Home</a>
+			<a href="#/orders">Orders</a>
+			<a ng-show="!authenticated && allowLogin" class="login-link" href="#/login">Login</a>
+			<a ng-show="authenticated && allowLogin" class="login-link" href="#/logout">Log out</a>
+		</header>
+		<section>
+			@RenderBody()
+		</section>
+		<footer>
+			&copy; 2015. All right reserved.
+		</footer>
+	</div>
+
+	<script>
+		window.config = {
+			allowLogin: @(ConfigurationManager.AppSettings["AllowLogin"].ToLower() == "true" ? "true" : "false")
+		};
+	</script>
+	<script src="~/js/libs/angular/angular.min.js"></script>
+	<script src="~/js/libs/angular/angular-route.min.js"></script>
+	<script src="~/js/app/app.js"></script>
+	<script src="~/js/app/ctrlOrders.js"></script>
+	<script src="~/js/app/ctrlLogin.js"></script>
+	<script src="~/js/app/ctrlLogout.js"></script>
+</body>
+</html>
